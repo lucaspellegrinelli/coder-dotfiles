@@ -5,6 +5,7 @@
 CODE_SERVER_BINARY="/tmp/code-server/bin/code-server"
 SETTINGS_FILE="$HOME/.local/share/code-server/User/settings.json"
 KEYBINDINGS_FILE="$HOME/.local/share/code-server/User/keybindings.json"
+CONTINUE_CONFIG_FILE="$HOME/.continue/config.json"
 MAX_RETRIES=30
 RETRY_INTERVAL=2
 
@@ -83,9 +84,23 @@ setup_user_files() {
     merge_json "$KEYBINDINGS_FILE" "settings/keybindings.json"
 }
 
+setup_continue_config() {
+    echo "Setting Continue config..."
+
+    if [ -z "$MIXTRAL_CODESTRA_API_KEY" ]; then
+        echo "Error: MIXTRAL_CODESTRA_API_KEY environment variable is not set or empty." >&2
+        exit 1
+    fi
+
+    mkdir -p "$(dirname "$CONTINUE_CONFIG_FILE")"
+
+    sed "s|\"\\[API_KEY\\]\"|\"${MIXTRAL_CODESTRA_API_KEY//\//\\/}\"|g" "settings/continue_config.json" > "$CONTINUE_CONFIG_FILE"
+}
+
 # Main Script
 
 ensure_jq_installed
 wait_for_code_server
 setup_user_files
 install_extensions
+setup_continue_config

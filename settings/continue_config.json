@@ -1,0 +1,60 @@
+{
+    "models": [
+        {
+            "apiKey": "[API_KEY]",
+            "title": "Codestral",
+            "model": "codestral-latest",
+            "provider": "mistral"
+        }
+    ],
+    "tabAutocompleteModel": {
+        "title": "Codestral",
+        "provider": "mistral",
+        "model": "codestral-latest",
+        "apiKey": "[API_KEY]"
+    },
+    "contextProviders": [
+        {
+            "name": "code",
+            "params": {}
+        },
+        {
+            "name": "docs",
+            "params": {}
+        },
+        {
+            "name": "diff",
+            "params": {}
+        },
+        {
+            "name": "terminal",
+            "params": {}
+        },
+        {
+            "name": "problems",
+            "params": {}
+        },
+        {
+            "name": "folder",
+            "params": {}
+        },
+        {
+            "name": "codebase",
+            "params": {}
+        }
+    ],
+    "slashCommands": [
+        {
+            "name": "share",
+            "description": "Export the current chat session to markdown"
+        },
+        {
+            "name": "cmd",
+            "description": "Generate a shell command"
+        },
+        {
+            "name": "commit",
+            "description": "Generate a git commit message"
+        }
+    ]
+}
