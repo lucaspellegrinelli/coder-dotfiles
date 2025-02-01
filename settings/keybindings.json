@@ -1,0 +1,135 @@
+[
+    /*
+    Open tab/file management
+    --------------------
+    ctrl+w          Closes current tab
+    ctrl+k          Changes to tab on the right
+    ctrl+j          Changes to tab on the left
+    ctrl+shift+k    Moves current tab to the right
+    ctrl+shift+j    Moves current tab to the left
+    ctrl+9          Changes to first tab
+    ctrl+0          Changes to second tab
+    ctrl+-          Changes to third tab
+    ctrl+=          Changes to fourth tab
+    */
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.nextEditor",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.previousEditor",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.moveEditorLeftInGroup"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.moveEditorRightInGroup"
+    },
+    {
+        "key": "ctrl+9",
+        "command": "workbench.action.openEditorAtIndex1"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "workbench.action.openEditorAtIndex2"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "workbench.action.openEditorAtIndex3"
+    },
+    {
+        "key": "ctrl+=",
+        "command": "workbench.action.openEditorAtIndex4"
+    },
+    /*
+    Terminal management
+    --------------------
+    ctrl+t          Toggle show terminal
+    ctrl+n          Creates a new terminal
+    ctrl+w          Kills current terminal
+    ctrl+j          Moves to the next terminal
+    ctrl+k          Moves to the previous terminal
+    */
+    {
+        "key": "ctrl+t",
+        "command": "runCommands",
+        "when": "!terminalFocus",
+        "args": {
+            "commands": [
+                "workbench.action.toggleMaximizedPanel",
+                "workbench.action.terminal.focus"
+            ]
+        }
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.togglePanel",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    /*
+    Navigation
+    --------------------
+    ctrl+p          Quick searches file
+    ctrl+e          Toggle focus on the file explorer
+    ctrl+z          Toggle sidebar
+    */
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen",
+        "when": "!inQuickOpen && !listFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "!sideBarFocus"
+    },
+    {
+        "key": "ctrl+z",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    /*
+    General
+    --------------------
+    ctrl+y          Accepts selection
+    */
+    {
+        "key": "ctrl+y",
+        "command": "acceptSelectedSuggestion",
+        "when": "suggestWidgetVisible && textInputFocus"
+    }
+]

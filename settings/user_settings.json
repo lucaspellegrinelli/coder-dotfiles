@@ -1,0 +1,149 @@
+{
+    "breadcrumbs.enabled": false,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+        "source.organizeImports": "always"
+    },
+    "editor.codeLens": false,
+    "editor.cursorBlinking": "solid",
+    "editor.fontSize": 13,
+    "editor.formatOnSave": true,
+    "editor.guides.indentation": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.inlayHints.enabled": "off",
+    "editor.inlineSuggest.enabled": true,
+    "editor.lineHeight": 1.8,
+    "editor.minimap.enabled": false,
+    "editor.overviewRulerBorder": false,
+    "editor.renderLineHighlight": "none",
+    "explorer.compactFolders": true,
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    "files.insertFinalNewline": true,
+    "window.commandCenter": false,
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.editor.labelFormat": "short",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.limit.value": 4,
+    "workbench.editor.revealIfOpen": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.panel.opensMaximized": "always",
+    "vim.easymotion": true,
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "leader",
+                "f"
+            ],
+            "commands": [
+                "editor.action.organizeImports",
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "m"
+            ],
+            "commands": [
+                "workbench.actions.menubar.focus"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "after": [
+                "g",
+                "h"
+            ]
+        },
+        {
+            "before": [
+                "s"
+            ],
+            "after": [
+                "<leader>",
+                "<leader>",
+                "2",
+                "f"
+            ]
+        },
+        {
+            "before": [
+                "S"
+            ],
+            "after": [
+                "<leader>",
+                "<leader>",
+                "2",
+                "F"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "c",
+                "a"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "r",
+                "r"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "r",
+                "n"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "g",
+                "s"
+            ],
+            "commands": [
+                "workbench.view.scm"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "J"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
+        }
+    ]
+}
