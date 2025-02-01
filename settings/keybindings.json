@@ -1,17 +1,4 @@
 [
-    /*
-    Open tab/file management
-    --------------------
-    ctrl+w          Closes current tab
-    ctrl+k          Changes to tab on the right
-    ctrl+j          Changes to tab on the left
-    ctrl+shift+k    Moves current tab to the right
-    ctrl+shift+j    Moves current tab to the left
-    ctrl+9          Changes to first tab
-    ctrl+0          Changes to second tab
-    ctrl+-          Changes to third tab
-    ctrl+=          Changes to fourth tab
-    */
     {
         "key": "ctrl+w",
         "command": "workbench.action.closeActiveEditor",
@@ -51,15 +38,6 @@
         "key": "ctrl+=",
         "command": "workbench.action.openEditorAtIndex4"
     },
-    /*
-    Terminal management
-    --------------------
-    ctrl+t          Toggle show terminal
-    ctrl+n          Creates a new terminal
-    ctrl+w          Kills current terminal
-    ctrl+j          Moves to the next terminal
-    ctrl+k          Moves to the previous terminal
-    */
     {
         "key": "ctrl+t",
         "command": "runCommands",
@@ -96,13 +74,6 @@
         "command": "workbench.action.terminal.focusPrevious",
         "when": "terminalFocus"
     },
-    /*
-    Navigation
-    --------------------
-    ctrl+p          Quick searches file
-    ctrl+e          Toggle focus on the file explorer
-    ctrl+z          Toggle sidebar
-    */
     {
         "key": "ctrl+p",
         "command": "workbench.action.quickOpen",
@@ -122,11 +93,6 @@
         "key": "ctrl+z",
         "command": "workbench.action.toggleSidebarVisibility"
     },
-    /*
-    General
-    --------------------
-    ctrl+y          Accepts selection
-    */
     {
         "key": "ctrl+y",
         "command": "acceptSelectedSuggestion",
