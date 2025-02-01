@@ -94,7 +94,7 @@ setup_continue_config() {
 
     mkdir -p "$(dirname "$CONTINUE_CONFIG_FILE")"
 
-    sed "s|\"\\[API_KEY\\]\"|\"${MIXTRAL_CODESTRA_API_KEY//\//\\/}\"|g" "settings/continue_config.json" > "$CONTINUE_CONFIG_FILE"
+    sed "s|\"\\[API_KEY\\]\"|\"${MIXTRAL_CODESTRAL_API_KEY//\//\\/}\"|g" "settings/continue_config.json" > "$CONTINUE_CONFIG_FILE"
 }
 
 # Main Script
