@@ -41,6 +41,8 @@
     "Codegeex.Chat.LanguagePreference": "English",
     "Codegeex.Comment.LanguagePreference": "English",
     "Codegeex.SidebarUI.LanguagePreference": "English",
+    "Codegeex.CommitMessage.LanguagePreference": "English",
+    "Codegeex.RepoIndex": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
