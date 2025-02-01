@@ -1,18 +1,16 @@
 {
     "models": [
         {
-            "title": "Codestral 2501",
-            "model": "mistralai/codestral-2501",
-            "provider": "openrouter",
-            "apiBase": "https://openrouter.ai/api/v1",
+            "title": "Codestral",
+            "model": "codestral-latest",
+            "provider": "mistral",
             "apiKey": "[API_KEY]"
         }
     ],
     "tabAutocompleteModel": {
-        "title": "Codestral 2501",
-        "model": "mistralai/codestral-2501",
-        "provider": "openrouter",
-        "apiBase": "https://openrouter.ai/api/v1",
+        "title": "Codestral",
+        "model": "codestral-latest",
+        "provider": "mistral",
         "apiKey": "[API_KEY]"
     },
     "contextProviders": [
