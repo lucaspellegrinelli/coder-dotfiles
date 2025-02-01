@@ -32,11 +32,21 @@ merge_json() {
     local existing_file=$1
     local new_file=$2
 
-    if [ -s "$existing_file" ]; then
-        if jq -s '.[0] * .[1]' "$existing_file" "$new_file" > "${existing_file}.tmp"; then
+    # If there is no existing file or it's empty, simply copy the new file
+    if [ ! -s "$existing_file" ]; then
+        cp "$new_file" "$existing_file"
+        return 0
+    fi
+
+    local json_type
+    json_type=$(jq -r 'type' "$existing_file" 2>/dev/null)
+
+    if [ "$json_type" = "array" ]; then
+        # Merge JSON arrays by concatenating them and removing duplicates.
+        if jq -s 'add | unique_by(.key)' "$existing_file" "$new_file" > "${existing_file}.tmp"; then
             mv "${existing_file}.tmp" "$existing_file"
         else
-            echo "Error: Failed to merge JSON files." >&2
+            echo "Error: Failed to merge JSON arrays." >&2
             echo "Contents of $existing_file:" >&2
             cat "$existing_file" >&2
             echo "" >&2
@@ -45,7 +55,18 @@ merge_json() {
             return 1
         fi
     else
-        cp "$new_file" "$existing_file"
+        # For JSON objects, merge them using the '*' operator.
+        if jq -s '.[0] * .[1]' "$existing_file" "$new_file" > "${existing_file}.tmp"; then
+            mv "${existing_file}.tmp" "$existing_file"
+        else
+            echo "Error: Failed to merge JSON objects." >&2
+            echo "Contents of $existing_file:" >&2
+            cat "$existing_file" >&2
+            echo "" >&2
+            echo "Contents of $new_file:" >&2
+            cat "$new_file" >&2
+            return 1
+        fi
     fi
 }
 
