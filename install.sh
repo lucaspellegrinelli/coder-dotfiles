@@ -87,8 +87,8 @@ setup_user_files() {
 setup_continue_config() {
     echo "Setting Continue config..."
 
-    if [ -z "$MIXTRAL_CODESTRA_API_KEY" ]; then
-        echo "Error: MIXTRAL_CODESTRA_API_KEY environment variable is not set or empty." >&2
+    if [ -z "$MIXTRAL_CODESTRAL_API_KEY" ]; then
+        echo "Error: MIXTRAL_CODESTRAL_API_KEY environment variable is not set or empty." >&2
         exit 1
     fi
 
