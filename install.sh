@@ -85,14 +85,13 @@ setup_user_files() {
 setup_continue_config() {
     echo "Setting Continue config..."
 
-    if [ -z "$MIXTRAL_CODESTRAL_API_KEY" ]; then
-        echo "Error: MIXTRAL_CODESTRAL_API_KEY environment variable is not set or empty." >&2
+    if [ -z "$OPEN_ROUTER_API_KEY" ]; then
+        echo "Error: OPEN_ROUTER_API_KEY environment variable is not set or empty." >&2
         exit 1
     fi
 
     mkdir -p "$(dirname "$CONTINUE_CONFIG_FILE")"
-
-    sed "s|\"\\[API_KEY\\]\"|\"${MIXTRAL_CODESTRAL_API_KEY//\//\\/}\"|g" "settings/continue_config.json" > "$CONTINUE_CONFIG_FILE"
+    sed "s|\"\\[API_KEY\\]\"|\"${OPEN_ROUTER_API_KEY//\//\\/}\"|g" "settings/continue_config.json" > "$CONTINUE_CONFIG_FILE"
 }
 
 # Main Script
