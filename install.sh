@@ -87,5 +87,5 @@ setup_user_files() {
 
 ensure_jq_installed
 wait_for_code_server
-setup_user_files
 install_extensions
+setup_user_files
