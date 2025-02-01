@@ -45,6 +45,7 @@ merge_json() {
         # Merge JSON arrays by concatenating them and removing duplicates.
         if jq -s 'add | unique_by(.key)' "$existing_file" "$new_file" > "${existing_file}.tmp"; then
             mv "${existing_file}.tmp" "$existing_file"
+            echo "Merged array jsons" >&2
         else
             echo "Error: Failed to merge JSON arrays." >&2
             echo "Contents of $existing_file:" >&2
@@ -58,6 +59,7 @@ merge_json() {
         # For JSON objects, merge them using the '*' operator.
         if jq -s '.[0] * .[1]' "$existing_file" "$new_file" > "${existing_file}.tmp"; then
             mv "${existing_file}.tmp" "$existing_file"
+            echo "Merged object jsons" >&2
         else
             echo "Error: Failed to merge JSON objects." >&2
             echo "Contents of $existing_file:" >&2
@@ -79,7 +81,9 @@ install_extensions() {
 setup_user_files() {
     echo "Setting up user files..."
     mkdir -p "$(dirname "$SETTINGS_FILE")"
+    echo "Setting up user settings..."
     merge_json "$SETTINGS_FILE" "settings/user_settings.json"
+    echo "Setting up user keybindings..."
     merge_json "$KEYBINDINGS_FILE" "settings/keybindings.json"
 }
 
@@ -87,5 +91,5 @@ setup_user_files() {
 
 ensure_jq_installed
 wait_for_code_server
-install_extensions
 setup_user_files
+install_extensions
