@@ -73,7 +73,7 @@ merge_json() {
 install_extensions() {
     "$CODE_SERVER_BINARY" --install-extension vscodevim.vim
     "$CODE_SERVER_BINARY" --install-extension catppuccin.catppuccin-vsc
-    "$CODE_SERVER_BINARY" --install-extension github.copilot
+    "$CODE_SERVER_BINARY" --install-extension AMiner.codegeex
 }
 
 setup_user_files() {
