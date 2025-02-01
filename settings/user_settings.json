@@ -36,6 +36,11 @@
     "vim.hlsearch": true,
     "vim.incsearch": true,
     "vim.leader": "<space>",
+    "Codegeex.Privacy": false,
+    "Codegeex.License": "",
+    "Codegeex.Chat.LanguagePreference": "English",
+    "Codegeex.Comment.LanguagePreference": "English",
+    "Codegeex.SidebarUI.LanguagePreference": "English"
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
