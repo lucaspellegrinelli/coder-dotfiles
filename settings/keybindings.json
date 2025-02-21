@@ -1,101 +1,96 @@
 [
     {
-        "key": "ctrl+w",
-        "command": "workbench.action.closeActiveEditor",
-        "when": "!terminalFocus"
+      "key": "ctrl+w",
+      "command": "workbench.action.closeActiveEditor",
+      "when": "!terminalFocus"
     },
     {
-        "key": "ctrl+k",
-        "command": "workbench.action.nextEditor",
-        "when": "!terminalFocus"
+      "key": "ctrl+k",
+      "command": "workbench.action.nextEditor",
+      "when": "!terminalFocus"
     },
     {
-        "key": "ctrl+j",
-        "command": "workbench.action.previousEditor",
-        "when": "!terminalFocus"
+      "key": "ctrl+j",
+      "command": "workbench.action.previousEditor",
+      "when": "!terminalFocus"
     },
     {
-        "key": "ctrl+shift+j",
-        "command": "workbench.action.moveEditorLeftInGroup"
+      "key": "ctrl+shift+j",
+      "command": "workbench.action.moveEditorLeftInGroup"
     },
     {
-        "key": "ctrl+shift+k",
-        "command": "workbench.action.moveEditorRightInGroup"
+      "key": "ctrl+shift+k",
+      "command": "workbench.action.moveEditorRightInGroup"
     },
     {
-        "key": "ctrl+9",
-        "command": "workbench.action.openEditorAtIndex1"
+      "key": "ctrl+9",
+      "command": "workbench.action.openEditorAtIndex1"
     },
     {
-        "key": "ctrl+0",
-        "command": "workbench.action.openEditorAtIndex2"
+      "key": "ctrl+0",
+      "command": "workbench.action.openEditorAtIndex2"
     },
     {
-        "key": "ctrl+-",
-        "command": "workbench.action.openEditorAtIndex3"
+      "key": "ctrl+-",
+      "command": "workbench.action.openEditorAtIndex3"
     },
     {
-        "key": "ctrl+=",
-        "command": "workbench.action.openEditorAtIndex4"
+      "key": "ctrl+=",
+      "command": "workbench.action.openEditorAtIndex4"
     },
     {
-        "key": "ctrl+t",
-        "command": "runCommands",
-        "when": "!terminalFocus",
-        "args": {
-            "commands": [
-                "workbench.action.toggleMaximizedPanel",
-                "workbench.action.terminal.focus"
-            ]
-        }
+      "key": "ctrl+t",
+      "command": "workbench.action.terminal.toggleTerminal",
+      "when": "(editorFocus && !panelVisible) || terminalFocus",
     },
     {
-        "key": "ctrl+t",
-        "command": "workbench.action.togglePanel",
-        "when": "terminalFocus"
+      "key": "ctrl+t",
+      "command": "workbench.action.terminal.focus",
+      "when": "editorFocus"
     },
     {
-        "key": "ctrl+n",
-        "command": "workbench.action.terminal.new",
-        "when": "terminalFocus"
+      "key": "ctrl+n",
+      "command": "workbench.action.terminal.new",
+      "when": "terminalFocus"
     },
     {
-        "key": "ctrl+w",
-        "command": "workbench.action.terminal.kill",
-        "when": "terminalFocus"
+      "key": "ctrl+w",
+      "command": "workbench.action.terminal.kill",
+      "when": "terminalFocus"
     },
     {
-        "key": "ctrl+j",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "terminalFocus"
+      "key": "ctrl+j",
+      "command": "workbench.action.terminal.focusNext",
+      "when": "terminalFocus"
     },
     {
-        "key": "ctrl+k",
-        "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus"
+      "key": "ctrl+k",
+      "command": "workbench.action.terminal.focusPrevious",
+      "when": "terminalFocus"
     },
     {
-        "key": "ctrl+p",
-        "command": "workbench.action.quickOpen",
-        "when": "!inQuickOpen && !listFocus"
+      "key": "ctrl+p",
+      "command": "workbench.action.quickOpen",
+      "when": "!inQuickOpen && !listFocus"
     },
     {
-        "key": "ctrl+e",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "sideBarFocus"
+      "key": "ctrl+e",
+      "command": "workbench.action.focusActiveEditorGroup",
+      "when": "sideBarFocus"
     },
     {
-        "key": "ctrl+e",
-        "command": "workbench.files.action.focusFilesExplorer",
-        "when": "!sideBarFocus"
+      "key": "ctrl+e",
+      "command": "workbench.files.action.focusFilesExplorer",
+      "when": "!sideBarFocus"
     },
     {
-        "key": "ctrl+z",
-        "command": "workbench.action.toggleSidebarVisibility"
+      "key": "ctrl+z",
+      "command": "workbench.action.toggleSidebarVisibility",
     },
     {
-        "key": "ctrl+y",
-        "command": "acceptSelectedSuggestion",
-        "when": "suggestWidgetVisible && textInputFocus"
-    }
-]
+      "key": "ctrl+y",
+      "command": "acceptSelectedSuggestion",
+      "when": "suggestWidgetVisible && textInputFocus"
+    },
+  ]
+  

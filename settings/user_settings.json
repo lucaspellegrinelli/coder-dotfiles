@@ -31,7 +31,6 @@
     "workbench.editor.limit.value": 4,
     "workbench.editor.revealIfOpen": false,
     "workbench.layoutControl.enabled": false,
-    "workbench.panel.opensMaximized": "always",
     "vim.easymotion": true,
     "vim.hlsearch": true,
     "vim.incsearch": true,
